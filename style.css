@@ -1,37 +1,51 @@
-.background {
-    background-color: #c2c2c2;
+body {
     font-family: Arial;
 }
-.main {
-    width: 70%;
-    background-color: white;
-    box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.1); /* 设置左下方向的阴影 */
-    margin: 0 auto; /* 水平居中 */
-    padding: 20px;
-    border-radius: 10px;
+
+@media (min-width: 1200px) {
+    .background {
+        background-color: #c2c2c2;
+    }
+
+    .main {
+        width: 70%;
+        background-color: white;
+        box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.1); /* 设置左下方向的阴影 */
+        margin: 0 auto; /* 水平居中 */
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .grid-main {
+        display: grid;
+        grid-template-columns: 1fr 2fr; /* 创建2列的网格，1列占1份，另1列占2份 */
+        grid-gap: 10%; /* 设置网格项之间的间距 */
+    }
+
 }
+
+@media (max-width: 1199px) {
+    .h-divider {
+        width: 100%;
+        height: 1px;
+        background-color: lightgray;
+        margin: 0 auto;
+    }
+    .visitor-info {
+        display: none;
+    }
+}
+
 
 .main-container {
     width: 90%;
     margin: 0 auto;
 }
 
-.menu {
-    margin: 0 auto;
+.time-td {
+    width: 25%;
 }
 
-.h-divider {
-    width: 100%;
-    height: 1px;
-    background-color: lightgray;
-    margin: 0 auto;
-}
-
-.grid-main {
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* 创建2列的网格，1列占1份，另1列占2份 */
-    grid-gap: 10%; /* 设置网格项之间的间距 */
-}
 
 .item1 {
     background-color: white;
@@ -40,6 +54,7 @@
 .item2 {
     background-color: white;
 }
+
 
 .row1 {
     padding: 5%;
@@ -55,8 +70,4 @@
 .font-h2 {
     font-size: 150%;
     font-weight: bold;
-}
-
-.time-td {
-    width: 25%;
 }
